@@ -27,6 +27,7 @@ dependencies:
   sqflite: any
   path_provider: any
   rxdart: any
+  html: any
 
 dev_dependencies:
   flutter_test:

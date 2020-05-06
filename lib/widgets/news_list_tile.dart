@@ -1,8 +1,8 @@
 
-
 import 'package:flutter/material.dart';
 import 'package:news/blocs/stories_provider.dart';
 import 'package:news/models/item_model.dart';
+import 'package:news/widgets/loading_container.dart';
 
 class NewsListTile extends StatelessWidget {
   final int itemId;
@@ -53,30 +53,6 @@ class NewsListTile extends StatelessWidget {
                 Text('${item.descendants==null? 0:item.descendants}')
               ],
             ),  
-          ),
-
-          
-          Divider(
-            thickness: 2,
-            height:10,
-            endIndent: 20,
-            indent: 20,
-            color: Colors.black26,
-          )
-        ],
-      ),
-    );
-  }
-  Widget loadingData(){
-    return Container(
-      color: Colors.white.withOpacity(.2),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          ListTile(
-            title: Container(color: Colors.grey[200],height: 50,),
-            subtitle: Container(color: Colors.grey[200],height: 20, width: 100,), 
           ),
 
           
