@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:news/blocs/comment_provider.dart';
 import 'package:news/screens/news_list.dart';
@@ -9,7 +8,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CommentProviver(
-          child: StoriesProvider(
+      child: StoriesProvider(
         child: MaterialApp(
           title: 'Flutter Demo',
           theme: ThemeData(
@@ -32,8 +31,9 @@ class MyApp extends StatelessWidget {
       );
     }
     return MaterialPageRoute(builder: (context) {
+      final combloc = CommentProviver.of(context);
       final itemId = int.parse(settings.name.replaceFirst('/', ''));
-
+      combloc.fetchComments(itemId);
       return NewsDetail(itemId: itemId);
     });
   }

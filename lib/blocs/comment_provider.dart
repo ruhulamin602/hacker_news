@@ -14,8 +14,6 @@ class CommentProviver extends InheritedWidget {
   }
 
   static CommentBloc of(BuildContext context) {
-    return (context.dependOnInheritedWidgetOfExactType(aspect: CommentProviver)
-            as CommentProviver)
-        .bloc;
+    return (context.dependOnInheritedWidgetOfExactType<CommentProviver>()).bloc;
   }
 }
