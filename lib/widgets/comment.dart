@@ -24,10 +24,12 @@ class Comment extends StatelessWidget {
               contentPadding:
                   EdgeInsets.only(right: 16.0, left: (depth + 1) * 16.0),
               title: buildText(item),
-              subtitle: Text(item.by == "" ? 'Deleted' : item.by),
+              subtitle: Text(item.by == "" ? 'Deleted' :'by: '+item.by),
             ),
             Divider(
-              thickness: 3,
+              thickness: 2,
+              indent: (depth+1)*16.0,
+              endIndent: 16,
             ),
           ];
           item.kids.forEach((kids) => children.add(Comment(

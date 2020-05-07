@@ -9,10 +9,10 @@ Widget loadingData() {
       children: <Widget>[
         ListTile(
           title: Container(
-            color: Colors.grey[200],
+            color: Colors.grey[600],
           ),
           subtitle: Container(
-            color: Colors.grey[200],
+            color: Colors.grey[600],
           ),
         ),
         Divider(
