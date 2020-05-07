@@ -7,21 +7,22 @@ Widget loadingData() {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        ListTile(
-          title: Container(
-            color: Colors.grey[600],
-          ),
-          subtitle: Container(
-            color: Colors.grey[600],
+        Card(
+          margin: EdgeInsets.symmetric(vertical: 5, horizontal: 20),
+          elevation: 4,
+          child: ListTile(
+            title: Container(),
+            subtitle: Container(),
           ),
         ),
-        Divider(
-          thickness: 2,
-          height: 10,
-          endIndent: 20,
-          indent: 20,
-          color: Colors.black26,
-        )
+
+        // Divider(
+        //   thickness: 2,
+        //   height: 10,
+        //   endIndent: 20,
+        //   indent: 20,
+        //   color: Colors.black26,
+        // )
       ],
     ),
   );
