@@ -15,6 +15,9 @@ class Repositoery {
   Future<List<int>> fetchTopIds() {
     return sources[1].fetchTopIds();
   }
+  Future<List<int>> fetchBestIds() {
+    return sources[1].fetchBestIds();
+  }
 
   Future<ItemModels> fetchItems(int id) async {
     ItemModels item;
@@ -44,6 +47,7 @@ class Repositoery {
 
 abstract class Source {
   Future<List<int>> fetchTopIds();
+  Future<List<int>> fetchBestIds();
   Future<ItemModels> fetchItems(int id);
 }
 

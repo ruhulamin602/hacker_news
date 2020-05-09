@@ -76,6 +76,9 @@ class NewsDbProvider implements Source, Cache {
   Future<List<int>> fetchTopIds() {
     return null;
   }
+  Future<List<int>> fetchBestIds() {
+    return null;
+  }
 
   Future<ItemModels> fetchItems(int id) async {
     final map = await db.query(

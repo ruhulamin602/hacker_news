@@ -25,8 +25,25 @@ class MyApp extends StatelessWidget {
       return MaterialPageRoute(
         builder: (context) {
           final bloc = StoriesProvider.of(context);
+          final title = "Best News";
+          bloc.fetchBestIds();
+          return NewsList(
+            ids: bloc.bestIds,
+            title: title,
+          );
+        },
+      );
+    } else if (settings.name == '/top') {
+      return MaterialPageRoute(
+        builder: (context) {
+          final bloc = StoriesProvider.of(context);
+          final title = "Top News";
           bloc.fetchTopIds();
-          return NewsList();
+
+          return NewsList(
+            ids: bloc.topIds,
+            title: title,
+          );
         },
       );
     }

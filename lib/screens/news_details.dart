@@ -33,7 +33,7 @@ class NewsDetail extends StatelessWidget {
               future: itemFuture,
               builder: (context, itemsnapshot) {
                 if (!itemsnapshot.hasData) {
-                  return Text('Loading Future');
+                  return Center(child: CircularProgressIndicator());
                 }
                 return buildList(itemsnapshot.data,snapshot.data);
               });
